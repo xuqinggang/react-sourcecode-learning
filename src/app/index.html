@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en' style="">
+
+<head>
+    <meta charset='UTF-8' />
+    <title>Document</title>
+    <style></style>
+    <script>
+        window.console.blue = function(...message) {
+            message.forEach(ms => {
+                console.log('%c%s', 'color:blue', ms);
+            })
+        };
+        window.console.red = function(...message) {
+            message.forEach(ms => {
+                console.log('%c%s', 'color:red', ms);
+            })
+        };
+    </script>
+</head>
+
+<body>
+    <div id='root'>
+    </div>
+</body>
+
+</html>

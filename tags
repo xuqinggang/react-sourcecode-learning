@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+App	src/app/App.js	/^class App extends Component {$/;"	C
+constructor	src/app/App.js	/^    constructor(props) {$/;"	M
+handleClick	src/app/App.js	/^    handleClick(event) {$/;"	M
+render	src/app/App.js	/^    render() {$/;"	M
+if	src/app/index.js	/^if (module && module.hot) {$/;"	M
+entry	webpack.config.babel.js	/^    entry: ['webpack\/hot\/dev-server','.\/src\/app\/index.js'],$/;"	P
+path	webpack.config.babel.js	/^        path: path.join(__dirname, 'dist\/app'),$/;"	P
+filename	webpack.config.babel.js	/^        filename: '[name].[hash].js',$/;"	P
+loaders	webpack.config.babel.js	/^        loaders: [$/;"	P
+test	webpack.config.babel.js	/^                test: \/\\.js$\/,$/;"	P
+loaders	webpack.config.babel.js	/^                loaders:['babel?cacheDirectory']$/;"	P
+test	webpack.config.babel.js	/^                test: \/\\.css$\/,$/;"	P
+loaders	webpack.config.babel.js	/^                loaders: [$/;"	P
+test	webpack.config.babel.js	/^                test:\/\\.scss$\/,$/;"	P
+loaders	webpack.config.babel.js	/^                loaders: [$/;"	P
+test	webpack.config.babel.js	/^                test: \/.(jpeg|png|jpg)$\/, $/;"	P
+loader	webpack.config.babel.js	/^                loader: 'url?limit=8192&name=img\/[hash:8].[name].[ext]'$/;"	P
+plugins	webpack.config.babel.js	/^    plugins: [$/;"	P
+filename	webpack.config.babel.js	/^            filename: 'index.html',$/;"	P
+template	webpack.config.babel.js	/^            template: path.join(__dirname, 'src\/app\/index.html'),$/;"	P
+inject	webpack.config.babel.js	/^            inject: 'body',$/;"	P
+root	webpack.config.babel.js	/^        root: process.cwd(), \/\/ set root directory to facilitate set 'import path' $/;"	P
+modulesDirectories	webpack.config.babel.js	/^        modulesDirectories: [$/;"	P
