@@ -1,4 +1,4 @@
-import React, { Component } from 'react/react.js';
+import React, { Component } from 'react';
 import './style.scss';
 const childCompArr = [];
 class Child extends Component {
@@ -17,14 +17,27 @@ class App extends Component {
     constructor(props) {
         super(props);
     }
-    handleClick(event) {
+    handleContainerClick(event) {
+    console.blue('handleContainerClick');
+        console.log('event', event);
+
+    }
+    handleInnerClick(event, a, b, c) {
+        console.blue('handleInnerClick');
         console.log('childCompArr', childCompArr);
         console.log('wrap', event, event.currentTarget, event.target); 
+        console.log(xxx);
+        console.log('a, b, c', a, b, c);
+    }
+    componentDidMount() {
+        console.log(this.divRef,'1231', this.childRef);
     }
     render() {
         return (
-            <div onClick={ this.handleClick.bind(this) } className="wrap">
-                <Child />
+            <div className='container' onClick={ this.handleContainerClick } >
+                <div ref={ divRef => { this.divRef = divRef } }onClick={ this.handleInnerClick.bind(this) } className="wrap">
+                    <Child ref= { childRef => { this.childRef = childRef } }/>
+                </div>
             </div>
         )
     }

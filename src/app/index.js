@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
-import React from 'react/react.js';
+import React from 'react';
 import App from './App';
+import QrCode from './QrCode/QrCode';
 // import configureStore from './redux/configureStore';
 // import { Provider } from 'react-redux';
 // import { syncHistoryWithStore } from 'react-router-redux';
@@ -23,7 +24,9 @@ import App from './App';
 //     </div>
 //   </Provider>
 // ), document.getElementById('root'));
-ReactDOM.render((
+ReactDOM.render(
+    // <QrCode />
+    
     <App>
     </App>
   // <Provider store={store}>
@@ -31,7 +34,7 @@ ReactDOM.render((
   //     {routes(history)}
   //   </div>
   // </Provider>
-), document.getElementById('root'));
+, document.getElementById('root'));
 if (module && module.hot) {
 	module.hot.accept();
 }
