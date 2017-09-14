@@ -70,11 +70,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
+        // new webpack.DefinePlugin({
+        //     'process.env': {
+        //         NODE_ENV: '"production"'
+        //     }
+        // }),
         // new webpack.EnvironmentPlugin(['NODE_ENV']),
         // new webpack.HotModuleReplacementPlugin(),
         new htmlWebpackPlugin({

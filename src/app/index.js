@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import App from './App';
+import Hello from './Test.js';
 import QrCode from './QrCode/QrCode';
 // import configureStore from './redux/configureStore';
 // import { Provider } from 'react-redux';
@@ -26,9 +27,15 @@ import QrCode from './QrCode/QrCode';
 // ), document.getElementById('root'));
 ReactDOM.render(
     // <QrCode />
-    
-    <App>
-    </App>
+    <div>
+        <Hello></Hello>
+        <div>
+            asdf
+            <span>123123</span>
+        </div>
+    </div>
+    // <App>
+    // </App>
   // <Provider store={store}>
   //   <div>
   //     {routes(history)}

@@ -18,26 +18,41 @@ class App extends Component {
         super(props);
     }
     handleContainerClick(event) {
-    console.blue('handleContainerClick');
+        console.blue('handleContainerClick');
         console.log('event', event);
 
     }
     handleInnerClick(event, a, b, c) {
+        // event.persist();
         console.blue('handleInnerClick');
         console.log('childCompArr', childCompArr);
         console.log('wrap', event, event.currentTarget, event.target); 
-        console.log(xxx);
+        throw Error('asdf');
+        // console.log(xxx);
         console.log('a, b, c', a, b, c);
+        // setTimeout(function() {
+        //     console.log(event,'xxxxxx'); // => null
+        // }, 0);
+    }
+    handleTestClick() {
+        console.blue('handleTestClick');
     }
     componentDidMount() {
-        console.log(this.divRef,'1231', this.childRef);
+        console.blue(this.divRef,'1231', this.childRef);
     }
     render() {
         return (
-            <div className='container' onClick={ this.handleContainerClick } >
-                <div ref={ divRef => { this.divRef = divRef } }onClick={ this.handleInnerClick.bind(this) } className="wrap">
-                    <Child ref= { childRef => { this.childRef = childRef } }/>
+            <div className='container' onClick={ this.handleContainerClick.bind(this) } >
+                <div className="wrap" onClick={ this.handleTestClick }>
+                    <div ref={ divRef => { this.divRef = divRef } } onClick={ this.handleInnerClick.bind(this) } className="wrap1">
+                        <Child ref= { childRef => { this.childRef = childRef } }/>
+                    </div>
                 </div>
+                {
+                    // <div ref={ divRef => { this.divRef = divRef } }onClick={ this.handleInnerClick.bind(this) } className="wrap2">
+                    //     <Child ref= { childRef => { this.childRef = childRef } }/>
+                    // </div>
+                }
             </div>
         )
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.scss';
 import QrImg from './test1.jpg';
 class QrCode extends Component {
     constructor(props) {
@@ -11,6 +12,9 @@ class QrCode extends Component {
     }
     componentDidMount() {
         document.body.addEventListener('click', e => {
+            if (e.target && e.target.matches('.code')) {
+                return ;
+            }
             this.setState({
                 active: false,
             });
@@ -30,7 +34,7 @@ class QrCode extends Component {
             <div>
                 <button onClick={ this.handleClick }>二维码</button>
                 <div onClick={ this.handleClickQr } style={ { display: this.state.active ? 'block' : 'none' } }>
-                    <img src={ QrImg } alt="" />
+                    <img className="code" src={ QrImg } alt="" />
                 </div>
             </div>
         )
